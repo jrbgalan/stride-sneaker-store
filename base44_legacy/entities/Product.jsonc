@@ -1,0 +1,113 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "brand": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "string",
+      "enum": [
+        "Men",
+        "Women",
+        "Kids",
+        "Unisex"
+      ],
+      "default": "Unisex"
+    },
+    "price": {
+      "type": "number"
+    },
+    "sale_price": {
+      "type": "number"
+    },
+    "on_sale": {
+      "type": "boolean",
+      "default": false
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sizes": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "colors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "hex": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "stock": {
+      "type": "number",
+      "default": 0
+    },
+    "rating": {
+      "type": "number",
+      "default": 4.5
+    },
+    "review_count": {
+      "type": "number",
+      "default": 0
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "best_seller": {
+      "type": "boolean",
+      "default": false
+    },
+    "trending": {
+      "type": "boolean",
+      "default": false
+    },
+    "new_arrival": {
+      "type": "boolean",
+      "default": false
+    },
+    "description": {
+      "type": "string"
+    },
+    "details": {
+      "type": "string"
+    },
+    "sku": {
+      "type": "string"
+    },
+    "weight": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "brand",
+    "category",
+    "price"
+  ]
+}
